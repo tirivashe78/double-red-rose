@@ -1,0 +1,9 @@
+/* ripple on button */
+@keyframes ripple {
+  to { transform: scale(4); opacity: 0; }
+}
+/* pulse arrow */
+@keyframes pulse {
+  0%,100% { opacity: .6; }
+  50% { opacity: 1; }
+}
