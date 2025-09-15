@@ -17,7 +17,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'blend',
     name: 'Double Red Rose (Blend)',
-    image: '/ingredients/double-red-rose.webp',
+    image: '/ingredients/dubleredrose.webp',
     short:
       'A curated blend of powerful red superfruits designed to support skin, respiratory, eye, mood, and more.',
     conditions: [
@@ -33,7 +33,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'goji',
     name: 'Goji Berry',
-    image: '/ingredients/goji.webp',
+    image: '/ingredients/gojiberry.webp',
     short: 'Traditionally used for eye health and metabolic support.',
     conditions: [
       'Glaucoma & age-related eye disease',
@@ -61,7 +61,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'peach',
     name: 'Peach',
-    image: '/ingredients/peach.webp',
+    image: '/ingredients/peaches.webp',
     short: 'Nutrient-dense fruit used in metabolic and cardiovascular support.',
     conditions: ['Obesity', 'Cardiovascular risk', 'Type 2 diabetes', 'Iron deficiency'],
     details:
@@ -70,7 +70,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'jujube',
     name: 'Jujube (Chinese Dates)',
-    image: '/ingredients/jujube.webp',
+    image: '/ingredients/chinesedates.webp',
     short: 'Soothing for digestion and traditional cognitive support.',
     conditions: ['UTIs', 'Constipation', 'Alzheimer’s (traditional use)', 'Cardiovascular health'],
     details:
@@ -79,7 +79,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'red-grapes',
     name: 'Red Grapes',
-    image: '/ingredients/red-grapes.webp',
+    image: '/ingredients/redgrapes.webp',
     short: 'Rich in polyphenols — circulation, skin, and systemic support.',
     conditions: ['Cholesterol', 'Cardiovascular', 'Skin', 'Digestive & lymph support'],
     details:
@@ -88,7 +88,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'acerola',
     name: 'Acerola Cherry',
-    image: '/ingredients/acerola.webp',
+    image: '/ingredients/acerola_cherry.webp',
     short: 'Vitamin C powerhouse for immune & mucosal health.',
     conditions: ['Liver support', 'Diarrhea & dysentery (traditional)', 'Coughs & colds'],
     details:
@@ -106,7 +106,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'red-ginseng',
     name: 'Red Ginseng',
-    image: '/ingredients/red-ginseng.webp',
+    image: '/ingredients/redginseng.webp',
     short: 'Adaptogenic root for energy, circulation, and sexual wellness.',
     conditions: ['Erectile dysfunction', 'Blood sugar regulation', 'Energy & stress'],
     details:
@@ -115,7 +115,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'carob',
     name: 'Carob Extract',
-    image: '/ingredients/carob.webp',
+    image: '/ingredients/carobextract.webp',
     short: 'Tonic for digestion and lipid balance.',
     conditions: ['Cholesterol', 'Digestive issues', 'Eye & skin support'],
     details:
@@ -124,7 +124,7 @@ const INGREDIENTS: Ingredient[] = [
   {
     id: 'honey-locust',
     name: 'Chinese Honey Locust',
-    image: '/ingredients/honey-locust.webp',
+    image: '/ingredients/honeylocust.webp',
     short: 'Traditional support for respiratory and digestive complaints.',
     conditions: ['Indigestion', 'Coughs & wheeze', 'Skin & phlegm conditions'],
     details:
