@@ -175,14 +175,14 @@ export default function HeroSection() {
 
         {/* Decorative Floating Roses */}
         <motion.div
-          className="absolute top-24 right-16 text-rose-300/70 text-5xl"
+          className="absolute top-24 right-16 text-rose-300/70 text-4xl"
           animate={{ y: [0, 20, 0], rotate: [0, 10, -10, 0] }}
           transition={{ repeat: Infinity, duration: 4 }}
         >
           <GiRose />
         </motion.div>
         <motion.div
-          className="absolute bottom-20 left-12 text-rose-400/80 text-xl"
+          className="absolute bottom-20 left-12 text-rose-400/80 text-4xl"
           animate={{ y: [0, 15, 0], rotate: [0, -10, 10, 0] }}
           transition={{ repeat: Infinity, duration: 3 }}
         >
