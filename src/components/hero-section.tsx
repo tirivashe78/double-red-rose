@@ -1,15 +1,18 @@
 "use client"
 
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { FaChevronDown, FaWhatsapp, FaHeart, FaLeaf, FaDroplet } from "react-icons/fa6"
-import { GiRose } from "react-icons/gi"
+import { GiRose, GiHamburgerMenu } from "react-icons/gi"
+import { IoMdClose } from "react-icons/io"
 import Particles from "react-tsparticles"
 import type { ISourceOptions } from "tsparticles-engine"
 import { loadFull } from "tsparticles"
 
 export default function HeroSection() {
   const text = "Double Red Rose".split(" ")
+  const [menuOpen, setMenuOpen] = useState(false)
+  const toggleMenu = () => setMenuOpen(!menuOpen)
 
   // Rose Petal Particles Configuration
   const particlesInit = async (main: any) => {
@@ -52,60 +55,51 @@ export default function HeroSection() {
         <Particles id="roseParticles" init={particlesInit} options={options} />
       </div>
 
-      {/* Header */}
+      {/* Header with Hamburger Menu */}
       <header className="fixed top-0 left-0 w-full z-50">
-        <nav className="backdrop-blur-md bg-red-600/70 border-b border-white/20 text-white">
-          <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+        <nav className="backdrop-blur-md bg-rose-600/70 border-b border-white/20 text-white">
+          <div className="max-w-6xl mx-auto px-4 flex items-center justify-between py-3">
             {/* Logo */}
-            <a
-              href="#home"
-              className="flex items-center gap-2 py-3 text-white hover:opacity-90 transition"
-            >
-              <img
-                src="/AG.png"
-                alt="Double Red Rose logo"
-                className="w-10 h-10 object-contain drop-shadow"
-              />
-              <span className="font-semibold text-lg hidden sm:inline drop-shadow-lg">
-                Double Red Rose
-              </span>
+            <a href="#home" className="flex items-center gap-2 text-white hover:opacity-90 transition">
+              <img src="/AG.png" alt="Double Red Rose logo" className="w-10 h-10 object-contain drop-shadow" />
+              <span className="font-semibold text-lg hidden sm:inline drop-shadow-lg">Double Red Rose</span>
             </a>
 
-            {/* Navigation */}
-            <ul className="flex items-center gap-6 py-4 text-sm md:text-base font-medium">
-              <li>
-                <a href="#why-it-matters" className="hover:text-rose-200 transition">
-                  Why It Matters
-                </a>
-              </li>
-              <li>
-                <a href="#product-features" className="hover:text-rose-200 transition">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#beauty-and-brain" className="hover:text-rose-200 transition">
-                  Beauty & Brain
-                </a>
-              </li>
-              <li>
-                <a href="#how-to-use" className="hover:text-rose-200 transition">
-                  How To Use
-                </a>
-              </li>
-              <li>
-                <a href="#map" className="hover:text-rose-200 transition">
-                  Contact
-                </a>
-              </li>
+            {/* Desktop Navigation */}
+            <ul className="hidden md:flex items-center gap-6 text-sm md:text-base font-medium">
+              <li><a href="#why-it-matters" className="hover:text-rose-200 transition">Why It Matters</a></li>
+              <li><a href="#product-features" className="hover:text-rose-200 transition">Features</a></li>
+              <li><a href="#beauty-and-brain" className="hover:text-rose-200 transition">Beauty & Brain</a></li>
+              <li><a href="#how-to-use" className="hover:text-rose-200 transition">How To Use</a></li>
+              <li><a href="#map" className="hover:text-rose-200 transition">Contact</a></li>
             </ul>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              className="md:hidden text-white text-2xl"
+              onClick={toggleMenu}
+              aria-label="Toggle Menu"
+            >
+              {menuOpen ? <IoMdClose /> : <GiHamburgerMenu />}
+            </button>
           </div>
+
+          {/* Mobile Menu */}
+          {menuOpen && (
+            <ul className="md:hidden flex flex-col gap-4 bg-rose-600/90 px-4 py-4 text-white font-medium">
+              <li><a href="#why-it-matters" onClick={toggleMenu} className="hover:text-rose-200 transition">Why It Matters</a></li>
+              <li><a href="#product-features" onClick={toggleMenu} className="hover:text-rose-200 transition">Features</a></li>
+              <li><a href="#beauty-and-brain" onClick={toggleMenu} className="hover:text-rose-200 transition">Beauty & Brain</a></li>
+              <li><a href="#how-to-use" onClick={toggleMenu} className="hover:text-rose-200 transition">How To Use</a></li>
+              <li><a href="#map" onClick={toggleMenu} className="hover:text-rose-200 transition">Contact</a></li>
+            </ul>
+          )}
         </nav>
       </header>
 
       {/* Hero Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 pt-20">
-        {/* Product Image (Still, enlarges on hover) */}
+        {/* Product Image */}
         <motion.img
           src="/drr.webp"
           alt="Double Red Rose product"
@@ -164,7 +158,7 @@ export default function HeroSection() {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 1.6 }}
-          className="mt-10 relative inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-green-500 to-green-400 text-white rounded-full shadow-xl hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-green-300"
+          className="mt-10 relative inline-flex items-center gap-3 px-8 py-3 bg-gradient-to-r from-rose-500 to-rose-400 text-white rounded-full shadow-xl hover:scale-105 transition-transform focus:outline-none focus:ring-2 focus:ring-green-300"
         >
           <FaWhatsapp className="text-xl" />
           <span className="font-medium text-lg">Buy Now</span>
@@ -181,14 +175,14 @@ export default function HeroSection() {
 
         {/* Decorative Floating Roses */}
         <motion.div
-          className="absolute top-24 right-16 text-rose-300/70 text-7xl"
+          className="absolute top-24 right-16 text-rose-300/70 text-5xl"
           animate={{ y: [0, 20, 0], rotate: [0, 10, -10, 0] }}
           transition={{ repeat: Infinity, duration: 4 }}
         >
           <GiRose />
         </motion.div>
         <motion.div
-          className="absolute bottom-20 left-12 text-rose-400/80 text-7xl"
+          className="absolute bottom-20 left-12 text-rose-400/80 text-xl"
           animate={{ y: [0, 15, 0], rotate: [0, -10, 10, 0] }}
           transition={{ repeat: Infinity, duration: 3 }}
         >
@@ -201,13 +195,14 @@ export default function HeroSection() {
         href="https://wa.me/263712110487?text=Hi%20—%20I'm%20interested%20in%20Double%20Red%20Rose"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl transition-transform hover:scale-110"
+        className="fixed bottom-6 right-6 z-50 bg-rose-500 hover:bg-rose-600 text-white p-4 rounded-full shadow-xl transition-transform hover:scale-110"
       >
         <FaWhatsapp className="text-2xl" />
       </a>
     </section>
   )
 }
+
 
 
 // "use client"
