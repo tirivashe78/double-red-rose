@@ -69,7 +69,7 @@ export default function HeroSection() {
             <ul className="hidden md:flex items-center gap-6 text-sm md:text-base font-medium">
               <li><a href="#why-it-matters" className="hover:text-rose-200 transition">Why It Matters</a></li>
               <li><a href="#product-features" className="hover:text-rose-200 transition">Features</a></li>
-              <li><a href="#beauty-and-brain" className="hover:text-rose-200 transition">Beauty & Brain</a></li>
+              <li><a href="#beauty-and-brain" className="hover:text-rose-200 transition">Benefits</a></li>
               <li><a href="#how-to-use" className="hover:text-rose-200 transition">How To Use</a></li>
               <li><a href="#map" className="hover:text-rose-200 transition">Contact</a></li>
             </ul>

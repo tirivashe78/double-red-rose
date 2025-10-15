@@ -138,7 +138,7 @@ export default function BeautyAndBrain() {
                   href="https://wa.me/263712110487?text=Hi%20I%27m%20interested%20in%20Double%20Red%20Rose"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full shadow"
+                  className="inline-flex items-center gap-2 bg-rose-500 hover:bg-rose-600 text-white px-4 py-2 rounded-full shadow"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
                     <path d="M20.52 3.48A11.86 11.86 0 0012 0C5.373 0 .02 5.354.02 11.98c0 2.112.55 4.172 1.59 5.987L0 24l6.272-1.635A11.94 11.94 0 0012 23.96c6.627 0 11.98-5.353 11.98-11.98 0-3.19-1.243-6.183-3.46-8.5zM12 21.86c-1.55 0-3.082-.4-4.42-1.16l-.32-.17-3.72.97.97-3.63-.2-.37A8.88 8.88 0 013.11 11.98c0-4.92 4.01-8.92 8.89-8.92 2.38 0 4.63.93 6.31 2.62s2.62 3.93 2.62 6.31c0 4.9-3.99 8.88-8.89 8.88z" />

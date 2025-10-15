@@ -17,18 +17,18 @@ export default function MapSection() {
           className="flex flex-col md:flex-row items-center gap-8"
         >
           {/* Left - Map / Image with rose tint overlay */}
-          <div className="w-full md:w-1/2 relative rounded-lg overflow-hidden shadow-lg">
+          {/* <div className="w-full md:w-1/2 relative rounded-lg overflow-hidden shadow-lg">
             <img
               src="/map-galaxy-mall.jpg"
               alt="Galaxy Mall Location"
               className="w-full h-[320px] md:h-[420px] object-cover"
-            />
+            /> */}
 
             {/* Rose-tint overlay on the image */}
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-rose-50/30 via-rose-100/20 to-rose-300/25 mix-blend-multiply" />
+            {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-rose-50/30 via-rose-100/20 to-rose-300/25 mix-blend-multiply" /> */}
 
             {/* Subtle pulse on the marker */}
-            <motion.div
+            {/* <motion.div
               aria-hidden
               initial={{ scale: 0.9, opacity: 0.9 }}
               animate={{ scale: [0.95, 1.05, 0.95], opacity: [0.9, 1, 0.9] }}
@@ -38,11 +38,11 @@ export default function MapSection() {
               <div className="w-3 h-3 rounded-full bg-rose-600 ring-4 ring-rose-200" />
               <span className="text-sm font-medium">Galaxy Mall — 4th Floor</span>
             </motion.div>
-          </div>
+          </div> */}
 
           {/* Right - Content */}
           <div className="w-full md:w-1/2 space-y-6">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
@@ -52,7 +52,7 @@ export default function MapSection() {
                 Galaxy Mall, 4th Floor, Corner Jason Moyo &amp; First Street.<br />
                 Join our in-person presentation and tasting — see, taste and sign up in person.
               </p>
-            </motion.div>
+            </motion.div> */}
 
             <motion.div
               className="flex flex-col sm:flex-row sm:items-center sm:gap-4 gap-3"
@@ -86,8 +86,7 @@ export default function MapSection() {
               <h4 className="text-lg font-semibold">Become a Registered Distributor</h4>
               <p className="mt-2 text-gray-700">
                 Want to enjoy discounted prices and sell products in your network? Become a
-                registered member and distributor. Attend one of our in-person presentations at the
-                Galaxy Mall location above to register and learn how the program works.
+                registered member and distributor.Call or message Enicah and learn how the program works.
               </p>
 
               <div className="mt-4 flex flex-col sm:flex-row sm:items-center sm:gap-3 gap-2">
@@ -108,8 +107,7 @@ export default function MapSection() {
                 </a>
               </div>
 
-              <p className="mt-3 text-sm text-gray-600">
-                Prefer to visit? Presentations and tastings happen regularly at the Mall — come
+              <p className="mt-3 text-sm text-gray-600">come
                 through to secure your membership and distributor perks.
               </p>
             </motion.div>
