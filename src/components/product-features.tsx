@@ -198,6 +198,7 @@ export default function ProductFeatures() {
   );
 
   return (
+    
     <section
       id="features"
       className="py-16 px-4 md:px-8 max-w-6xl mx-auto bg-gradient-to-b from-rose-100 via-white to-rose-100"
