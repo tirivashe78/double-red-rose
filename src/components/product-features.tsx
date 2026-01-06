@@ -204,6 +204,7 @@ export default function ProductFeatures() {
       className="py-16 px-4 md:px-8 max-w-6xl mx-auto bg-gradient-to-b from-rose-100 via-white to-rose-100"
     >
       {/* Header */}
+      
       <div className="mb-8 text-center">
         <div className="inline-flex items-center gap-3 px-4 py-1 rounded-full bg-gradient-to-r from-red-50 to-red-100 text-red-700 shadow-sm">
           <FaHeartbeat />
